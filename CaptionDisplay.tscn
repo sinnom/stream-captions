@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn2y77t4oqeij"]
+
+[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="1_wo7bs"]
+
+[node name="CaptionDisplay" type="Window"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("1_wo7bs")

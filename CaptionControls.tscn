@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://du6mdyhmray6k"]
+
+[ext_resource type="Script" path="res://CaptionControls.gd" id="1_i0w6e"]
+[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_pb302"]
+
+[node name="CaptionControls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i0w6e")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 75.0
+offset_right = 538.0
+offset_bottom = 233.0
+theme = ExtResource("2_pb302")
+placeholder_text = "Type message here"
+caret_blink = true
+caret_blink_interval = 0.5
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
