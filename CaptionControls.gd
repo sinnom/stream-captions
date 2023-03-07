@@ -34,7 +34,7 @@ func _on_line_edit_text_submitted(new_text: String):
 	text_timer = Timer.new()
 	add_child(text_timer)
 	text_timer.timeout.connect(_on_Timer_timeout)
-	text_timer.set_wait_time(0.2)
+	text_timer.set_wait_time(0.05)
 	text_timer.set_one_shot(false) # Make sure it loops
 	text_timer.start()
 
