@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="stream-captions"
-run/main_scene="res://CaptionControls.tscn"
+run/main_scene="res://caption_controls.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 

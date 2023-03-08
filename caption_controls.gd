@@ -1,6 +1,6 @@
 extends Control
 
-var display_scene = preload("res://CaptionDisplay.tscn")
+var display_scene = preload("res://display_window.tscn")
 
 var controls
 var display
@@ -12,9 +12,9 @@ var text: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var controls = get_viewport()
+	controls = get_viewport()
 	controls.gui_embed_subwindows = false
-	var display = display_scene.instantiate()
+	display = display_scene.instantiate()
 	add_child(display)
 	
 	controls.size = Vector2(500, 300)
@@ -22,7 +22,7 @@ func _ready():
 	display.position = controls.position + Vector2i(0, 150)
 	controls.position -= Vector2i(0, 210)
 	
-	label = display.get_node("Label")
+	label = display.get_node("SequentialText")
 
 
 

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://du6mdyhmray6k"]
+[gd_scene load_steps=3 format=3 uid="uid://66mk6y0gwpe2"]
 
-[ext_resource type="Script" path="res://CaptionControls.gd" id="1_i0w6e"]
-[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_pb302"]
+[ext_resource type="Script" path="res://caption_controls.gd" id="1_68syl"]
+[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_bffa5"]
 
 [node name="CaptionControls" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_i0w6e")
+script = ExtResource("1_68syl")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 0
@@ -18,7 +18,7 @@ offset_left = 1.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 233.0
-theme = ExtResource("2_pb302")
+theme = ExtResource("2_bffa5")
 placeholder_text = "Type message here"
 caret_blink = true
 caret_blink_interval = 0.5
