@@ -1,6 +1,7 @@
 extends Control
 
-var display_scene = preload("res://display_window.tscn")
+@export var display_scene: PackedScene
+
 
 var controls
 var display
