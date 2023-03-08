@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://66mk6y0gwpe2"]
+
+[ext_resource type="Script" path="res://caption_controls.gd" id="1_aaqnn"]
+[ext_resource type="PackedScene" uid="uid://bn2y77t4oqeij" path="res://display_window.tscn" id="2_ucio4"]
+[ext_resource type="PackedScene" uid="uid://ve0ur64tjg0c" path="res://caption_controls.tscn" id="3_nm5fw"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_aaqnn")
+display_scene = ExtResource("2_ucio4")
+
+[node name="CaptionControls" parent="." instance=ExtResource("3_nm5fw")]
