@@ -13,5 +13,6 @@ func _on_timer_timeout():
 	if target_text_len > target_text.length():
 		$Timer.stop()
 	text = target_text.substr(0, target_text_len)
+	$AudioStreamPlayer.play()
 	target_text_len += 1
 
