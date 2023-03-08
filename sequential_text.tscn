@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccy3v8017ajkh"]
+[gd_scene load_steps=3 format=3 uid="uid://ccy3v8017ajkh"]
 
 [ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="1_6s7i5"]
+[ext_resource type="Script" path="res://sequential_text.gd" id="2_gpcba"]
 
 [node name="SequentialText" type="Label"]
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("1_6s7i5")
+script = ExtResource("2_gpcba")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

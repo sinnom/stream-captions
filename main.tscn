@@ -1,11 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://66mk6y0gwpe2"]
+[gd_scene load_steps=3 format=3 uid="uid://b51ctpneiy561"]
 
-[ext_resource type="Script" path="res://caption_controls.gd" id="1_aaqnn"]
-[ext_resource type="PackedScene" uid="uid://bn2y77t4oqeij" path="res://display_window.tscn" id="2_ucio4"]
-[ext_resource type="PackedScene" uid="uid://ve0ur64tjg0c" path="res://caption_controls.tscn" id="3_nm5fw"]
+[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_u7ck4"]
+[ext_resource type="PackedScene" uid="uid://ccy3v8017ajkh" path="res://sequential_text.tscn" id="3_0fej8"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_aaqnn")
-display_scene = ExtResource("2_ucio4")
 
-[node name="CaptionControls" parent="." instance=ExtResource("3_nm5fw")]
+[node name="CaptionControls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit" type="LineEdit" parent="CaptionControls"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 75.0
+offset_right = 538.0
+offset_bottom = 233.0
+theme = ExtResource("2_u7ck4")
+placeholder_text = "Type message here"
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Window" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(500, 300)
+
+[node name="CaptionsDisplay" type="Control" parent="Window"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="SequentialText" parent="Window/CaptionsDisplay" instance=ExtResource("3_0fej8")]
+layout_mode = 0
+
+[connection signal="text_submitted" from="CaptionControls/LineEdit" to="Window/CaptionsDisplay/SequentialText" method="_on_line_edit_text_submitted"]
