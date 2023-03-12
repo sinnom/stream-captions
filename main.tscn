@@ -25,6 +25,7 @@ caret_blink_interval = 0.5
 [node name="Window" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(500, 300)
+borderless = true
 
 [node name="CaptionsDisplay" type="Control" parent="Window"]
 layout_mode = 3
