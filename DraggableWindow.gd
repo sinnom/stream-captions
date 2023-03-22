@@ -1,4 +1,6 @@
 extends Control
+## Make ancestor window's whole surface draggable. 
+
 
 @export var window: Window
 var is_dragging: bool = false
