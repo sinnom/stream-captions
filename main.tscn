@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjifwldhagvhc"]
+[gd_scene load_steps=3 format=3 uid="uid://cjifwldhagvhc"]
 
+[ext_resource type="PackedScene" uid="uid://djbfti6ltw778" path="res://scenes/captions_display.tscn" id="2_n2jsi"]
 [ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_u7ck4"]
-[ext_resource type="PackedScene" uid="uid://ccy3v8017ajkh" path="res://sequential_text.tscn" id="3_0fej8"]
-[ext_resource type="Script" path="res://DraggableWindow.gd" id="3_urmy5"]
 
 [node name="Main" type="Node"]
 
@@ -28,17 +27,4 @@ initial_position = 1
 size = Vector2i(500, 300)
 borderless = true
 
-[node name="CaptionsDisplay" type="Control" parent="Window"]
-layout_mode = 3
-anchors_preset = 0
-
-[node name="SequentialText" parent="Window/CaptionsDisplay" instance=ExtResource("3_0fej8")]
-layout_mode = 0
-
-[node name="DraggableWindow" type="Control" parent="Window/CaptionsDisplay" node_paths=PackedStringArray("window")]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("3_urmy5")
-window = NodePath("../..")
-
-[connection signal="text_submitted" from="CaptionControls/LineEdit" to="Window/CaptionsDisplay/SequentialText" method="_on_line_edit_text_submitted"]
+[node name="CaptionsDisplay" parent="Window" instance=ExtResource("2_n2jsi")]
