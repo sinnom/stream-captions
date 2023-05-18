@@ -1,6 +1,6 @@
 extends Control
+class_name CaptionControls
 
-@export var controls: CaptionControls
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

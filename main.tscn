@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://djnfij0k5sg50"]
+[gd_scene load_steps=5 format=3 uid="uid://djnfij0k5sg50"]
 
-[ext_resource type="PackedScene" uid="uid://nvg2qo5drept" path="res://scenes/views/captions_display.tscn" id="2_n2jsi"]
+[ext_resource type="Script" path="res://CaptionControls.gd" id="1_1fnjf"]
+[ext_resource type="PackedScene" uid="uid://bao4gdu3q5i5t" path="res://scenes/views/captions_display.tscn" id="2_n2jsi"]
 [ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_u7ck4"]
 [ext_resource type="PackedScene" uid="uid://d3luv7fpgt7m3" path="res://scenes/components/DraggableWindowComponent.tscn" id="3_gejk2"]
 
@@ -11,6 +12,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_1fnjf")
 
 [node name="LineEdit" type="LineEdit" parent="CaptionControls"]
 layout_mode = 0
