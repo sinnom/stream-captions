@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://nvg2qo5drept"]
+[gd_scene load_steps=3 format=3 uid="uid://bao4gdu3q5i5t"]
 
-[ext_resource type="PackedScene" uid="uid://ccy3v8017ajkh" path="res://sequential_text.tscn" id="1_71g14"]
+[ext_resource type="PackedScene" path="res://scenes/components/sequential_text.tscn" id="1_71g14"]
 [ext_resource type="Script" path="res://scenes/views/captions_display.gd" id="1_ooncb"]
 
 [node name="CaptionsDisplay" type="Control"]
