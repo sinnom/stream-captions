@@ -1,10 +1,7 @@
 extends Control
 
-@export var window: Window
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$DraggableWindow
 	pass # Replace with function body.
 
 
