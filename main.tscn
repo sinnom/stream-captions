@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjifwldhagvhc"]
+[gd_scene load_steps=4 format=3 uid="uid://djnfij0k5sg50"]
 
-[ext_resource type="PackedScene" uid="uid://djbfti6ltw778" path="res://scenes/captions_display.tscn" id="2_n2jsi"]
+[ext_resource type="PackedScene" uid="uid://nvg2qo5drept" path="res://scenes/views/captions_display.tscn" id="2_n2jsi"]
 [ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_u7ck4"]
+[ext_resource type="PackedScene" uid="uid://d3luv7fpgt7m3" path="res://scenes/components/DraggableWindowComponent.tscn" id="3_gejk2"]
 
 [node name="Main" type="Node"]
 
@@ -28,3 +29,6 @@ size = Vector2i(500, 300)
 borderless = true
 
 [node name="CaptionsDisplay" parent="Window" instance=ExtResource("2_n2jsi")]
+
+[node name="DraggableWindowComponent" parent="Window" node_paths=PackedStringArray("window") instance=ExtResource("3_gejk2")]
+window = NodePath("..")

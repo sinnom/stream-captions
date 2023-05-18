@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://nvg2qo5drept"]
+
+[ext_resource type="PackedScene" uid="uid://ccy3v8017ajkh" path="res://sequential_text.tscn" id="1_71g14"]
+[ext_resource type="Script" path="res://scenes/views/captions_display.gd" id="1_ooncb"]
+
+[node name="CaptionsDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ooncb")
+
+[node name="SequentialText" parent="." instance=ExtResource("1_71g14")]
+layout_mode = 0
