@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjj2pveemkrbx"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="PackedScene" uid="uid://bmmfwqvkxi2u" path="res://scenes/views/caption_controls.tscn" id="1_sjx3h"]
-[ext_resource type="PackedScene" uid="uid://fq3kg2ihplvk" path="res://scenes/views/CaptionDisplay.tscn" id="2_n2jsi"]
-[ext_resource type="PackedScene" uid="uid://d3luv7fpgt7m3" path="res://scenes/components/DraggableWindowComponent.tscn" id="3_gejk2"]
+[ext_resource type="PackedScene" path="res://scenes/views/caption_controls.tscn" id="1_sjx3h"]
+[ext_resource type="PackedScene" path="res://scenes/views/caption_display.tscn" id="2_n2jsi"]
+[ext_resource type="PackedScene" uid="uid://d3luv7fpgt7m3" path="res://scenes/components/draggable_window_component.tscn" id="3_gejk2"]
 
 [node name="Main" type="Node"]
 
