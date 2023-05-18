@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3]
 
 [ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="1_6s7i5"]
-[ext_resource type="Script" path="res://scenes/components/sequential_text.gd" id="2_gpcba"]
+[ext_resource type="Script" path="res://scenes/components/SequentialText.gd" id="2_gpcba"]
 [ext_resource type="AudioStream" uid="uid://be78utgdwqeub" path="res://twoTone2.ogg" id="3_6p8hm"]
 
 [node name="SequentialText" type="Label"]
