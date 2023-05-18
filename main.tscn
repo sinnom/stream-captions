@@ -1,29 +1,12 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://bjj2pveemkrbx"]
 
-[ext_resource type="Script" path="res://CaptionControls.gd" id="1_1fnjf"]
+[ext_resource type="PackedScene" uid="uid://bmmfwqvkxi2u" path="res://scenes/views/caption_controls.tscn" id="1_sjx3h"]
 [ext_resource type="PackedScene" uid="uid://fq3kg2ihplvk" path="res://scenes/views/CaptionDisplay.tscn" id="2_n2jsi"]
-[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_u7ck4"]
 [ext_resource type="PackedScene" uid="uid://d3luv7fpgt7m3" path="res://scenes/components/DraggableWindowComponent.tscn" id="3_gejk2"]
 
 [node name="Main" type="Node"]
 
-[node name="CaptionControls" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_1fnjf")
-
-[node name="LineEdit" type="LineEdit" parent="CaptionControls"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 75.0
-offset_right = 538.0
-offset_bottom = 233.0
-theme = ExtResource("2_u7ck4")
-placeholder_text = "Type message here"
-caret_blink = true
-caret_blink_interval = 0.5
+[node name="CaptionControls" parent="." instance=ExtResource("1_sjx3h")]
 
 [node name="Window" type="Window" parent="."]
 initial_position = 1
