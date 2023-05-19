@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://dlb6p03qae3qj"]
 
 [ext_resource type="Script" path="res://scenes/views/caption_controls.gd" id="1_a0iet"]
 [ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_aibdw"]
@@ -20,3 +20,5 @@ theme = ExtResource("2_aibdw")
 placeholder_text = "Type message here"
 caret_blink = true
 caret_blink_interval = 0.5
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

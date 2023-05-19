@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://c62pbnhluuvdh"]
 
-[ext_resource type="PackedScene" path="res://scenes/views/caption_controls.tscn" id="1_sjx3h"]
-[ext_resource type="PackedScene" path="res://scenes/views/caption_display.tscn" id="2_n2jsi"]
-[ext_resource type="PackedScene" uid="uid://d3luv7fpgt7m3" path="res://scenes/components/draggable_window_component.tscn" id="3_gejk2"]
+[ext_resource type="PackedScene" uid="uid://dlb6p03qae3qj" path="res://scenes/views/caption_controls.tscn" id="1_sjx3h"]
+[ext_resource type="PackedScene" uid="uid://b176oyrn4t1hg" path="res://scenes/views/caption_display.tscn" id="2_n2jsi"]
+[ext_resource type="PackedScene" uid="uid://ip5100ooxerm" path="res://scenes/components/draggable_window_component.tscn" id="3_gejk2"]
 
 [node name="Main" type="Node"]
 
@@ -17,3 +17,5 @@ borderless = true
 
 [node name="DraggableWindowComponent" parent="Window" node_paths=PackedStringArray("window") instance=ExtResource("3_gejk2")]
 window = NodePath("..")
+
+[connection signal="submit" from="CaptionControls" to="Window/CaptionsDisplay" method="_on_caption_controls_submit"]

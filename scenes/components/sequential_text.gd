@@ -1,10 +1,11 @@
 extends Label
+class_name SequentialText
 
 var target_text_len: int
 var target_text: String
 
 
-func _on_line_edit_text_submitted(new_text: String):
+func render_text(new_text: String):
 	target_text = new_text
 	target_text_len = 0
 	$Timer.start()
