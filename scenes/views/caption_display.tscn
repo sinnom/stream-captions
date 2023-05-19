@@ -3,9 +3,13 @@
 [ext_resource type="PackedScene" path="res://scenes/components/sequential_text.tscn" id="1_71g14"]
 [ext_resource type="Script" path="res://scenes/views/caption_display.gd" id="1_r2f1y"]
 
-[node name="CaptionsDisplay" type="Control"]
+[node name="CaptionDisplay" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_r2f1y")
 
 [node name="SequentialText" parent="." instance=ExtResource("1_71g14")]
