@@ -1,4 +1,5 @@
 extends Control
+class_name DraggableWindow
 ## Make ancestor window's whole surface draggable. 
 
 

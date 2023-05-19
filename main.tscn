@@ -1,44 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjifwldhagvhc"]
+[gd_scene load_steps=4 format=3 uid="uid://c62pbnhluuvdh"]
 
-[ext_resource type="Theme" uid="uid://bfd08ebhxbffa" path="res://theme.tres" id="2_u7ck4"]
-[ext_resource type="PackedScene" uid="uid://ccy3v8017ajkh" path="res://sequential_text.tscn" id="3_0fej8"]
-[ext_resource type="Script" path="res://DraggableWindow.gd" id="3_urmy5"]
+[ext_resource type="PackedScene" uid="uid://dlb6p03qae3qj" path="res://scenes/views/caption_controls.tscn" id="1_sjx3h"]
+[ext_resource type="PackedScene" uid="uid://b176oyrn4t1hg" path="res://scenes/views/caption_display.tscn" id="2_n2jsi"]
+[ext_resource type="PackedScene" uid="uid://ip5100ooxerm" path="res://scenes/components/draggable_window_component.tscn" id="3_gejk2"]
 
 [node name="Main" type="Node"]
 
-[node name="CaptionControls" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="LineEdit" type="LineEdit" parent="CaptionControls"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 75.0
-offset_right = 538.0
-offset_bottom = 233.0
-theme = ExtResource("2_u7ck4")
-placeholder_text = "Type message here"
-caret_blink = true
-caret_blink_interval = 0.5
+[node name="CaptionControls" parent="." instance=ExtResource("1_sjx3h")]
 
 [node name="Window" type="Window" parent="."]
 initial_position = 1
 size = Vector2i(500, 300)
 borderless = true
 
-[node name="CaptionsDisplay" type="Control" parent="Window"]
-layout_mode = 3
-anchors_preset = 0
+[node name="CaptionsDisplay" parent="Window" instance=ExtResource("2_n2jsi")]
 
-[node name="SequentialText" parent="Window/CaptionsDisplay" instance=ExtResource("3_0fej8")]
-layout_mode = 0
+[node name="DraggableWindowComponent" parent="Window" node_paths=PackedStringArray("window") instance=ExtResource("3_gejk2")]
+window = NodePath("..")
 
-[node name="DraggableWindow" type="Control" parent="Window/CaptionsDisplay" node_paths=PackedStringArray("window")]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("3_urmy5")
-window = NodePath("../..")
-
-[connection signal="text_submitted" from="CaptionControls/LineEdit" to="Window/CaptionsDisplay/SequentialText" method="_on_line_edit_text_submitted"]
+[connection signal="submit" from="CaptionControls" to="Window/CaptionsDisplay" method="_on_caption_controls_submit"]
